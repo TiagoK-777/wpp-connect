@@ -1,8 +1,8 @@
 name: WPPConnect Server
-version: "1.0.5"
+version: "1.0.6"
 slug: wppconnect
 description: Add-on para rodar o WPPConnect Server
-webui: http://[HOST]:[PORT:21465]/api-docs
+webui: http://[HOST]:[PORT:21465]
 arch:
   - amd64
 init: false
@@ -14,13 +14,13 @@ ports:
 options:
   SERVER_PORT: 21465
   SECRET_KEY: "minha-chave-secreta"
+  WEBHOOK_URL: "http://homeassistant:8123/api/webhook/wppconnect"
   FRONTEND: false
   START_ALL_SESSION: true
   NO_WEBHOOK_READMESSAGE: true
   NO_WEBHOOK_LISTENACKS: true
   NO_WEBHOOK_ONPRESENCECHANGED: true
   NO_WEBHOOK_ONPARTICIPANTSCHANGED: true
-  WEBHOOK_URL: "http://homeassistant:8123/api/webhook/wppconnect"
 schema:
   SERVER_PORT: "int?"
   SECRET_KEY: "str?"
