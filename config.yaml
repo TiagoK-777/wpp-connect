@@ -16,6 +16,10 @@ options:
   SECRET_KEY: "minha-chave-secreta"
   FRONTEND: false
   START_ALL_SESSION: true
+  NO_WEBHOOK_READMESSAGE: true
+  NO_WEBHOOK_LISTENACKS: true
+  NO_WEBHOOK_ONPRESENCECHANGED: true
+  NO_WEBHOOK_ONPARTICIPANTSCHANGED: true
   WEBHOOK_URL: "http://homeassistant:8123/api/webhook/wppconnect"
 schema:
   SERVER_PORT: "int?"
@@ -24,7 +28,3 @@ schema:
   START_ALL_SESSION: "bool?"
   WEBHOOK_URL: "str?"
   WEBHOOK_READMESSAGE: "bool?"
-  NO_WEBHOOK_READMESSAGE: true
-  NO_WEBHOOK_LISTENACKS: true
-  NO_WEBHOOK_ONPRESENCECHANGED: true
-  NO_WEBHOOK_ONPARTICIPANTSCHANGED: true
