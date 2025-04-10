@@ -46,22 +46,5 @@ curl --request GET \
   --header 'accept: */*'
 ```
 
-## Enviar mensagem
-
-```
-curl --request POST \
-  --url http://homeassistant:21465/api/NOME-DA-SESSAO/send-message \
-  --header 'Authorization: Bearer MEU_TOKEN_SUPER_SECRETO' \
-  --header 'Content-Type: application/json' \
-  --header 'accept: */*' \
-  --data '{
-    "phone": "5555999999999",
-    "isGroup": false,
-    "isNewsletter": false,
-    "isLid": false,
-    "message": "Hi from WPPConnect"  
-}'
-```
-
 ## Tutorial - Youtube
 - Veja o tutorial de uso no [Canal WPPConnect](https://www.youtube.com/watch?v=zBmCnPS3JOQ).
