@@ -24,9 +24,9 @@ options:
 schema:
   SERVER_PORT: "int?"
   SECRET_KEY: "str?"
+  WEBHOOK_URL: "str?"
   FRONTEND: "bool?"
   START_ALL_SESSION: "bool?"
-  WEBHOOK_URL: "str?"
   NO_WEBHOOK_READMESSAGE: "bool?"
   NO_WEBHOOK_LISTENACKS: "bool?"
   NO_WEBHOOK_ONPRESENCECHANGED: "bool?"
