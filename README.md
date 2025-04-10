@@ -45,3 +45,6 @@ curl --request GET \
   --header 'Authorization: Bearer MEU_TOKEN_SUPER_SECRETO' \
   --header 'accept: */*'
 ```
+
+## Tutorial - Youtube
+- Veja o tutorial de uso no [Canal WPPConnect](https://www.youtube.com/watch?v=zBmCnPS3JOQ).
