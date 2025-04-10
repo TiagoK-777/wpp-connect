@@ -1,6 +1,4 @@
-# WPPConnect Team
-
-## WPPConnect Server CLI
+# WPPConnect Server CLI
 
 ## Nossos canais online
 
@@ -11,8 +9,39 @@ Esse pacote facilita a utilizacao do servidor WPPConnect server atraves de uma l
 [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Group-25D366?logo=whatsapp)](https://chat.whatsapp.com/LJaQu6ZyNvnBPNAVRbX00K)
 [![YouTube](https://img.shields.io/youtube/channel/subscribers/UCD7J9LG08PmGQrF5IS7Yv9A?label=YouTube)](https://www.youtube.com/c/wppconnect)
 
-# Documentação da api
+## Documentação da api
 
 ```
-http://homeassistant/21465/api-docs/
+http://homeassistant:21465/api-docs/
+```
+
+## Criar sessão e gerar token
+
+```
+curl --request POST \
+  --url http://homeassistant:21465/api/NOME-DA-SESSAO/minha-chave-secreta/generate-token \
+  --header 'accept: */*'
+```
+
+## Iniciar sessão
+
+```
+curl --request POST \
+  --url http://homeassistant:21465/api/NOME-DA-SESSAO/start-session \
+  --header 'Authorization: Bearer MEU_TOKEN_SUPER_SECRETO' \
+  --header 'Content-Type: application/json' \
+  --header 'accept: */*' \
+  --data '{
+   "webhook": "",
+   "waitQrCode": false
+ }'
+```
+
+## Gerar qrcode
+
+```
+curl --request GET \
+  --url http://homeassistant:21465/api/NOME-DA-SESSAO/qrcode-session \
+  --header 'Authorization: Bearer MEU_TOKEN_SUPER_SECRETO' \
+  --header 'accept: */*'
 ```
