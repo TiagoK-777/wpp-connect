@@ -2,6 +2,8 @@ name: WPPConnect Server
 version: "1.0.8"
 slug: wppconnect
 description: Add-on para rodar o WPPConnect Server
+build_from:
+  amd64: "wppconnect/server-cli:latest"
 webui: http://[HOST]:[PORT:21465]
 arch:
   - amd64
