@@ -15,7 +15,7 @@ jobs:
       - name: Obter o digest da imagem mais recente
         id: image
         run: |
-          DIGEST=$(docker pull server-cli:latest | grep "Digest:" | awk '{print $2}')
+          DIGEST=$(docker pull wppconnect/server-cli:latest | grep "Digest:" | awk '{print $2}')
           echo "digest=${DIGEST}" >> $GITHUB_OUTPUT
 
       - name: Verificar se o digest já está no repositório
