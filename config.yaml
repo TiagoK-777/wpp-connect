@@ -1,10 +1,10 @@
 name: WPPConnect Server
-version: "1.1.0"
+version: "1.1.1"
 slug: wppconnect
 description: Add-on para rodar o WPPConnect Server
 build_from:
   amd64: "wppconnect/server-cli:main"
-webui: http://[HOST]:[PORT:21465]
+webui: http://[HOST]:[PORT:21465]/api-docs/
 arch:
   - amd64
 init: false
@@ -20,6 +20,7 @@ options:
   FRONTEND: false
   START_ALL_SESSION: true
   NO_WEBHOOK_READMESSAGE: true
+  WEBHOOK_READMESSAGE: false
   NO_WEBHOOK_LISTENACKS: true
   NO_WEBHOOK_ONPRESENCECHANGED: true
   NO_WEBHOOK_ONPARTICIPANTSCHANGED: true
@@ -30,6 +31,7 @@ schema:
   FRONTEND: "bool?"
   START_ALL_SESSION: "bool?"
   NO_WEBHOOK_READMESSAGE: "bool?"
+  WEBHOOK_READMESSAGE: "bool?"
   NO_WEBHOOK_LISTENACKS: "bool?"
   NO_WEBHOOK_ONPRESENCECHANGED: "bool?"
   NO_WEBHOOK_ONPARTICIPANTSCHANGED: "bool?"
