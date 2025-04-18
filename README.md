@@ -35,7 +35,7 @@ curl --request POST \
   --header 'accept: */*' \
   --data '{
    "webhook": "",
-   "waitQrCode": false
+   "waitQrCode": true
  }'
 ```
 
