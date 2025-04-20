@@ -8,7 +8,6 @@ webui: http://[HOST]:[PORT:21465]/api-docs/
 ingress: true
 ingress_port: 21465
 watchdog: "http://[HOST]:[PORT:21465]"
-panel_icon: mdi:whatsapp
 arch:
   - amd64
 init: false
