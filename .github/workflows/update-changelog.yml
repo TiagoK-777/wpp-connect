@@ -26,7 +26,8 @@ jobs:
       - name: Get release info from GitHub
         id: release
         run: |
-          RELEASE_INFO=$(curl -s https://api.github.com/repos/wppconnect-team/wppconnect-server/releases/tags/v${{ steps.extract.outputs.version }})
+          VERSION=${{ steps.extract.outputs.version }}
+          RELEASE_INFO=$(curl -s https://api.github.com/repos/wppconnect-team/wppconnect-server/releases/tags/v$VERSION)
           BODY=$(echo "$RELEASE_INFO" | jq -r .body)
           echo "body<<EOF" >> $GITHUB_OUTPUT
           echo "$BODY" >> $GITHUB_OUTPUT
@@ -41,10 +42,10 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-            commit_message: "docs: update CHANGELOG for version ${{ steps.extract.outputs.version }}"
-            branch: ${{ github.head_ref }}
-            commit_user_name: github-actions[bot]
-            commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
-            push_options: '--force'
+          commit_message: "docs: update CHANGELOG for version ${{ steps.extract.outputs.version }}"
+          branch: ${{ github.head_ref }}
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          push_options: --force
         env:
-            GIT_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
