@@ -47,7 +47,7 @@ jobs:
             echo "${{ steps.release.outputs.body }}"
             echo
             cat CHANGELOG.md
-          } > CHANGELOG.md
+          } > temp.md && mv temp.md CHANGELOG.md
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
