@@ -1,4 +1,4 @@
-name: Update CHANGELOG on version bum
+name: Update CHANGELOG on version bump
 
 on:
   pull_request:
