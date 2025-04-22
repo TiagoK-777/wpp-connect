@@ -35,7 +35,7 @@ curl --request POST \
   --header 'accept: */*' \
   --data '{
    "webhook": "",
-   "waitQrCode": false
+   "waitQrCode": true
  }'
 ```
 
@@ -62,7 +62,7 @@ curl --request POST \
     "isNewsletter": false,
     "isLid": false,
     "message": "Hi from WPPConnect"  
-}'
+ }'
 ```
 
 ## Tutorial - Youtube
