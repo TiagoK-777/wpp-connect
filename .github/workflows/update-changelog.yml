@@ -41,5 +41,10 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: update CHANGELOG for version ${{ steps.extract.outputs.version }}"
-          branch: ${{ github.head_ref }}
+            commit_message: "docs: update CHANGELOG for version ${{ steps.extract.outputs.version }}"
+            branch: ${{ github.head_ref }}
+            commit_user_name: github-actions[bot]
+            commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+            push_options: '--force'
+        env:
+            GIT_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
