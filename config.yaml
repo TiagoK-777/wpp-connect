@@ -5,6 +5,7 @@ description: Add-on para rodar o WPPConnect Server
 build_from:
   amd64: "wppconnect/server-cli:main"
 webui: http://[HOST]:[PORT:21465]/api-docs/
+url: https://github.com/TiagoK-777/wppconnect-addon
 arch:
   - amd64
 init: false
