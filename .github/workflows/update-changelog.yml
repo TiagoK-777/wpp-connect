@@ -50,7 +50,7 @@ jobs:
           } > temp.md && mv temp.md CHANGELOG.md
 
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}          # ← token correto
           file_pattern: CHANGELOG.md                  # ← especifique quais arquivos adicionar
